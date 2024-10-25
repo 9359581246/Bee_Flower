@@ -109,9 +109,34 @@ font-family: "DejaVu Sans";
 }
 
 .wild-img{
+transition: transform 0.3s ease;
+
 width: 100%;
 height: 100%;
 }
+.wild-img:hover{
+    transform: scale(0.9);
+}
+/* .card{
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card-container{
+    preserve:1000px
+} */
+.card-1{
+ max-width:100%;
+height: auto;
+display: grid;
+margin: 5px;
+grid-template-columns: (4,1fr);
+     }
+     @media (max-width: 768px) {
+.card-1{
+    grid-template-columns: (2,1fr);
+}
+     }
 .btn-flower{
 background-color: white;
 color: #000000;
@@ -182,7 +207,7 @@ gap: 10px;
 }
 /* .client-img{
 align-items: center;
-} */
+} */    
 .client-img{
 text-align:center;
 }
@@ -317,30 +342,37 @@ height: 30px;
   .card {
       width: 100%; /* Make cards full width on small screens */
       margin-bottom: 20px; /* Add spacing between cards */
+      display: flex;
   }
 
   .client-header {
       font-size: 1.2rem; /* Adjust font size */
+      display: flex;
   }
 
   .para-rating {
       font-size: 0.9rem; /* Adjust font size for paragraphs */
+      display: flex;
   }
 
   .insta-header {
       font-size: 1.5rem; /* Adjust Instagram header size */
+      display: flex;
   }
 
   .footer .header-1 {
       font-size: 1.2rem; /* Adjust footer header size */
+      display: flex;
   }
 
   .footer .list {
       font-size: 0.9rem; /* Adjust footer list item size */
+      display: flex;
   }
 
   .icon-low .ico {
       font-size: 20px; /* Adjust icon size in footer */
+      display: flex;
   }
 }
 
@@ -357,4 +389,55 @@ height: 30px;
   .insta-header {
       font-size: 1.3rem; /* Further adjust Instagram header size */
   }
+}
+/* Base styles here... */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .col-lg-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    /* Adjustments for other elements as needed */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    /* Adjust other layout elements as needed */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .col-lg-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    /* Adjust any other layout for larger screens */
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .icon-3, .icon-4 {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    /* Adjust text sizes, margins, or other properties as necessary */
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .nav-item {
+        text-align: center; /* Center navigation links */
+    }
+    .para-content {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+    /* Further adjustments for a better mobile experience */
 }
